@@ -1,0 +1,13 @@
+data/merged_credit_data.csv filter=lfs diff=lfs merge=lfs -text
+data/processed_data.csv filter=lfs diff=lfs merge=lfs -text
+data/train_data.csv filter=lfs diff=lfs merge=lfs -text
+data/test_data.csv filter=lfs diff=lfs merge=lfs -text
+models filter=lfs diff=lfs merge=lfs -text
+Notebooks filter=lfs diff=lfs merge=lfs -text
+output filter=lfs diff=lfs merge=lfs -text
+src filter=lfs diff=lfs merge=lfs -text
+testing filter=lfs diff=lfs merge=lfs -text
+visualization filter=lfs diff=lfs merge=lfs -text
+visualization/payday_spending.svg filter=lfs diff=lfs merge=lfs -text
+visualization/big_time_series_plot.html filter=lfs diff=lfs merge=lfs -text
+visualization/enhanced_animated_time_series.html filter=lfs diff=lfs merge=lfs -text
