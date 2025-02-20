@@ -28,7 +28,7 @@ This interactive dashboard helps visualize **credit card spending patterns** and
 # Load dataset
 @st.cache_data
 def load_data():
-    DATASET_PATH = "D:/Credit_Card_Spend_Analysis/data/credit_1.csv"  # Update with actual path
+    DATASET_PATH = "/workspaces/Credit-Card-Webapp/data/credit_1.csv"  # Update with actual path
     df = pd.read_csv(DATASET_PATH)
     df["ds"] = pd.to_datetime(df["trans_date_trans_time"])  # Convert date column to datetime
     return df
@@ -44,7 +44,7 @@ if "customer_id" not in df.columns:
 # Load test dataset for prediction
 @st.cache_data
 def load_test_data():
-    TEST_DATA_PATH = "D:/Credit_Card_Spend_Analysis/data/test_data.csv"  # Update path
+    TEST_DATA_PATH = "/workspaces/Credit-Card-Webapp/data/test_data.csv"  # Update path
     df_test = pd.read_csv(TEST_DATA_PATH)
     return df_test
 
@@ -53,7 +53,7 @@ df_test = load_test_data()
 # Load XGBoost model for forecasting
 @st.cache_resource
 def load_model():
-    return joblib.load("D:/Credit_Card_Spend_Analysis/models/xgboost_model.pkl")  # Update path
+    return joblib.load("/workspaces/Credit-Card-Webapp/models/xgboost_model.pkl")  # Update path
 
 model = load_model()
 
@@ -98,7 +98,6 @@ n_days = st.slider("Select forecast period (days)", 7, 180, 30)  # Fixed slider 
 # Prepare test data for prediction
 feature_cols = ["hour", "minute", "second", "day_of_week", "is_weekend", "month", "quarter", 
                 "week_of_year", "year", "lag_1", "lag_7", "lag_30", "rolling_mean_7", "rolling_std_7"]
-
 #  Ensure test dataset has necessary columns
 if set(feature_cols).issubset(df_test.columns):
     df_test_filtered = df_test[df_test["customer_id"] == customer_id] if "customer_id" in df_test.columns else df_test
