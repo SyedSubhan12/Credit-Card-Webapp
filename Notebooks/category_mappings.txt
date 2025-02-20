@@ -1,0 +1,66 @@
+### Day of Week ###
+Friday: 0
+Thursday: 1
+Tuesday: 2
+Wednesday: 3
+
+### Type of Card ###
+MasterCard: 0
+Visa: 1
+
+### Entry Mode ###
+CVC: 0
+PIN: 1
+Tap: 2
+
+### Type of Transaction ###
+ATM: 0
+Online: 1
+POS: 2
+
+### Merchant Group ###
+Children: 0
+Electronics: 1
+Entertainment: 2
+Fashion: 3
+Food: 4
+Gaming: 5
+Products: 6
+Restaurant: 7
+Services: 8
+Subscription: 9
+nan: 10
+
+### Country of Transaction ###
+China: 0
+India: 1
+Russia: 2
+USA: 3
+United Kingdom: 4
+
+### Country of Residence ###
+China: 0
+India: 1
+Russia: 2
+USA: 3
+United Kingdom: 4
+
+### Gender ###
+F: 0
+M: 1
+nan: 2
+
+### Bank ###
+Barclays: 0
+Barlcays: 1
+HSBC: 2
+Halifax: 3
+Lloyds: 4
+Metro: 5
+Monzo: 6
+RBS: 7
+
+### Fraud ###
+0: 0
+1: 1
+
